@@ -8,7 +8,7 @@ this.height = height;
 this.width = width;
 this.bg = bg;
 this.fontSize = fontSize;
-this.create();
+
 }
 
 DomElement.prototype.create = function () {
@@ -29,3 +29,4 @@ newDiv.textContent = 'Новый элемент';
 };
 const domEl = new DomElement('#block', 400, 400, 'red', 36);
 
+domEl.create();
