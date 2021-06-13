@@ -20,10 +20,12 @@ DomElement.prototype.create = function () {
         newDiv.id = this.selector.slice(1);
         body.append(newDiv);
 }
-newDiv.style.height = this.height + 'px';
-newDiv.style.width = this.width + 'px';
-newDiv.style.background  = this.bg;
-newDiv.style.fontSize  = this.fontSize + 'px';
+newDiv.style.cssText = `height: ${this.height}px;
+width: ${this.width}px;
+background: ${this.bg};
+font-size: ${this.fontSize}px;
+`;
+
 newDiv.textContent = 'Новый элемент';
 
 };
